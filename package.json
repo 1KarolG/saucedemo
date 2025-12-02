@@ -1,0 +1,25 @@
+{
+  "name": "saucedemo",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/1KarolG/saucedemo#readme",
+  "bugs": {
+    "url": "https://github.com/1KarolG/saucedemo/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1KarolG/saucedemo.git"
+  },
+  "license": "ISC",
+  "author": "Karol Goralczyk",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "tests": "cypress run --headless",
+    "open": "cypress open"
+  },
+  "devDependencies": {
+    "cypress": "^15.7.0",
+    "typescript": "^5.9.3"
+  }
+}
