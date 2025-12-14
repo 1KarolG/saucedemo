@@ -10,9 +10,7 @@ describe('Verify saucedemo page using UI tools', () => {
 
     beforeEach(() => {
         cy.visit(Configuration.baseURL);
-        cy.get(SaucedemoPage.usernameInput).type(Configuration.username);
-        cy.get(SaucedemoPage.passwordInput).type(Configuration.password);
-        cy.get(SaucedemoPage.loginButton).click();
+        SaucedemoPage.loginUser(Configuration.username, Configuration.password);
     })
 
     afterEach(() => {
@@ -25,7 +23,7 @@ describe('Verify saucedemo page using UI tools', () => {
     })
 
     it('Verify adding items to card', () => {
-        cy.contains('button', 'Add to cart').first().click();
+        SaucedemoPage.addFirstItemToCart();
         cy.get(SaucedemoPage.shoppingCartBadge).should('have.text', shoppingCartItems);
     })
 })
